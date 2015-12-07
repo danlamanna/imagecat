@@ -16,7 +16,7 @@ ENV JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 ENV JRE_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 
 RUN mkdir /deploy
-RUN git clone -b docker-allow-override-of-list-file https://github.com/danlamanna/imagecat.git
+RUN git clone -b next https://github.com/danlamanna/imagecat.git
 WORKDIR imagecat
 RUN mvn install
 RUN cp -R distribution/target/*.tar.gz /deploy
